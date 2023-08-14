@@ -15,7 +15,7 @@ const useGenres = () =>
     queryKey: ["genres"],
     queryFn: apiClient.getAll,
     staleTime: 24 * 60 * 60 * 1000, // 24 hours our data will be refreshed
-    initialData: { count: genres.length, results: genres }, // since we need to make the type of the initial data the same as the type of the data returned by the queryFn, FetchResponse<Genre>
+    initialData: genres,
   });
 
 export default useGenres;
